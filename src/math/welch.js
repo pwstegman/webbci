@@ -57,7 +57,7 @@ function d_constant(x) {
  * @param {number} [options.overlapLength=null] - Amount of overlap between segments in samples. Defaults to floor(segmentLength / 2).
  * @param {string|number[]} [options.window='hann'] - Window function to apply, either 'hann', 'rectangular', or an array for a custom window. Default is 'hann'.
  * @param {number} [options.fftSize=Math.pow(2, bci.nextpow2(signal.length))] - Size of the fft to be used. Should be a power of 2.
- * @param {string} [options.detrend='constant'] - Detrend to apply.
+ * @param {string} [options.detrend='none'] - Detrend to apply.
  * @returns {object} PSD object with keys {estimates: PSD estimates in units of X^2/Hz, frequencies: corresponding frequencies in Hz}
  */
 export function welch(signal, sample_rate, options) {
@@ -66,7 +66,7 @@ export function welch(signal, sample_rate, options) {
         overlapLength: null,
         window: 'hann',
         fftSize: null,
-        detrend: 'constant',
+        detrend: 'none',
         verbose: true
     }, options);
 
