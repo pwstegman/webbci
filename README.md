@@ -11,6 +11,11 @@
 
 <br>
 
+## Changes
+
+If one uses `welch` the results differ from python scipy welch due to constant detrend being applied there.
+The same is implemented here for compatibility.
+
 ## Getting Started
 
 Latest release is v1.8.0. You can view the release notes at [releases](https://github.com/pwstegman/bci.js/releases)
